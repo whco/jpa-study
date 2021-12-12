@@ -1,6 +1,7 @@
-## 연관관계 매핑, @JoinColumn
+## 연관관계 매핑, @JoinColumn 에 대한 정리
 
 [참조1](https://victorydntmd.tistory.com/208)
+[참조2](https://data-make.tistory.com/611)
 
 ### 연관관계 매핑
 - 연관관계 매핑이란 객체의 참조와 테이블의 외래키를 매핑하는 것
@@ -14,15 +15,27 @@
 > ```
 - Jpa에서는 엔티티 객체를 참조.
 
-### 방향, 다중성, 주인(Owner)
+### 방향(Direction, 다중성(Multiplicity), 주인(Owner)
 방향
+- 방향은 객체관계에만 존재
+- 테이블 관계는 항상 양방향
 - 단방향 관계 : 한 쪽이 다른 한 쪽의 엔티티만 참조
 - 양방향 관계 : 두 엔티티가 서로 참조
-다중성 : 다음 네 가지 중 하나
-- OneToOne
-- OneToMany
-- ManyToOne
-- ManyToMany
+
+다중성
+- 다음 네 가지 중 하나
+  - OneToOne
+  - OneToMany
+  - ManyToOne
+  - ManyToMany
+- 위 네 노테이션 중 하나는 필수로 사용
+
+
 주인(Owner)
 - 연관 관계를 갖는 두 테이블에 대해 외래키를 갖는 테이블이 주인
 - 주인만이 외래 키를 관리(등록, 수정, 삭제)할 수 있고, 주인이 아니면 읽기만 가능
+
+### @JoinColumn(name="category_no)
+
+
+
