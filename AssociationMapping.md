@@ -36,6 +36,14 @@
 - 주인만이 외래 키를 관리(등록, 수정, 삭제)할 수 있고, 주인이 아니면 읽기만 가능
 
 ### @JoinColumn(name="category_no)
+- 엔티티 연결 또는 element collection을 join하기 위한 열을 지정
+- name 은 내용에 따라 참조할 테이블 결정
+  - OneToOne, ManyToOne 이용한 FK 매핑 : source 엔티티나 embeddable의 테이블에 FK 컬럼 있음
+  > Embeddable Class
+  > - 
+  - 단방향 OneToMay 이용한 FK 매핑 : 타켓 엔티티에 FK 있음
+  - Join Table 이용한 ManyToMany, OneToOne, 양방향 ManyToOne/OneToMany : Join Table에 FK 있음
+  - join이 element collection인 경우, FK가 collection table에 있음
 
 
 
